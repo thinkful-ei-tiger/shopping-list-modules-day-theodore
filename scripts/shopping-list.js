@@ -54,9 +54,8 @@ const addItemToShoppingList = function (itemName) {
     store.items.push(item.create(itemName))
     render()
 
-    throw new Error (`Cannot add item: ${itemName}`)
   } catch(error){
-    console.log(`Cannot add item: ${Error.itemName}`)
+    console.log(`Cannot add item: ${itemName}`)
   }
 
 };

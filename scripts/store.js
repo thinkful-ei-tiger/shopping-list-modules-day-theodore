@@ -17,10 +17,10 @@ const findById = function(id){
 
 const addItem = function(name){
     try{
-        item.validateName
-        item.create
-        this.items.push(name)
-        throw new Error ('Cannot create item')
+        item.validateName(name)
+        item.create(name)
+        this.items.push(item.create(name))
+        
     }catch(e){
         console.log('Cannot create item')
     }
@@ -32,11 +32,12 @@ const findAndToggleChecked = function(id){
 
 const findAndUpdateName = function(id){
     try{
-        item.validateName
+        item.validateName(id)
         this.findById(id)
-        item.create
+        item.create(id)
+        throw new Error (`Cannot update name: ${id}`)
     } catch(e){
-        console.log(`Cannot update name: ${error.message}`)
+        console.log(`Cannot update name: ${id}`)
     }
 }
 
