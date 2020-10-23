@@ -9,6 +9,8 @@ const findById = function(id){
   let found = id.find(function(theItem) {
     return theItem === item.id
   })
+  console.log(found)
+
   return found
 }
 
@@ -18,6 +20,7 @@ const addItem = function(name){
         item.validateName
         item.create
         this.items.push(name)
+        throw new Error ('Cannot create item')
     }catch(e){
         console.log('Cannot create item')
     }

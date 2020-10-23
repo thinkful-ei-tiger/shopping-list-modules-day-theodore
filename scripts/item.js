@@ -7,12 +7,13 @@ const validateName = function (name){
 }
 
 const create = function (name){
-    let item = 
-    {
+
+    let item = {
         id: cuid(),
-        name: name,
+        name: `${name}`,
         checked: false
-    }
+      }
+      console.log(item)
     return item
 }
 
