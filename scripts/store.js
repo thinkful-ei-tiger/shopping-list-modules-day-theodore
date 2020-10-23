@@ -7,11 +7,10 @@ const hideCheckedItems = false;
 
 const findById = function(id){
   let found = id.find(function(theItem) {
-    return theItem === item.id
+    return theItem.id === store.items
   })
-  console.log(found)
 
-  return found
+  return item.id
 }
 
 
